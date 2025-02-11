@@ -177,6 +177,8 @@ export class CapturarPage implements OnInit {
     this.getServices.allEntidades$.subscribe((entidades) => {
       this.allEntidades = entidades;
       this.filteredEntidades = [...entidades];
+      console.log('Estoy en getEntidades()');
+      console.log(this.filteredEntidades);
     });
   }
 

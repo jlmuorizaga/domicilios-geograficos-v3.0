@@ -18,4 +18,8 @@ export const routes: Routes = [
     path: 'capturar',
     loadComponent: () => import('./pages/capturar/capturar.page').then( m => m.CapturarPage)
   },
+  {
+    path: 'capturar2',
+    loadComponent: () => import('./pages/capturar2/capturar2.page').then( m => m.Capturar2Page)
+  },
 ];
