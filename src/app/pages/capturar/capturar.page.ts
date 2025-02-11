@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { AlertController } from '@ionic/angular';
+import { IonicModule, AlertController } from '@ionic/angular';
 import { ReactiveFormsModule, FormControl, FormGroup, Validators, FormBuilder } from '@angular/forms';
 import { getServices } from '../../utils/getServices';
 import { getFilterOptions } from '../../utils/getFilterOptions';
@@ -22,17 +22,13 @@ import { tooltipEntidad, tooltipMunicipio, tooltipLocalidad, tooltipTipoVialidad
   tooltipTipoVialidadReferencia2, tooltipNombreVialidadReferencia2,
   tooltipTipoVialidadReferenciaPosterior, tooltipNombreVialidadReferenciaPosterior,
   tooltipDescripcionUbicacion } from '../../utils/constantes';
-  import { IonContent, IonHeader, IonTitle, IonToolbar, IonButtons, IonBackButton,
-    IonCardHeader, IonButton, IonGrid, IonRow, IonCol, IonCard, IonCardSubtitle, IonCardTitle, IonCardContent, IonInput, IonList, IonItem, IonIcon, IonSpinner, IonTextarea } from '@ionic/angular/standalone';
 
 @Component({
   selector: 'app-capturar',
   templateUrl: './capturar.page.html',
   styleUrls: ['./capturar.page.scss'],
   standalone: true,
-  imports: [IonContent, IonHeader, IonTitle, IonToolbar, IonButtons, IonBackButton,
-    IonCardHeader, IonButton, IonGrid, IonRow, IonCol, IonCard, IonCardSubtitle, IonCardTitle, IonCardContent, IonInput, IonList, IonItem, IonIcon, IonSpinner, IonTextarea]
-
+  imports: [IonicModule, CommonModule, ReactiveFormsModule]
 })
 export class CapturarPage implements OnInit {
   formularioCapturar!: FormGroup;
