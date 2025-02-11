@@ -23,7 +23,7 @@ export class MenuPage implements OnInit {
   onClickCapturar() {
     console.log('capturar');
     this.router.navigateByUrl(environment.paginaCapturar);
-    this.router.navigateByUrl(environment.paginaCapturar, { state: { data: undefined } });
+   // this.router.navigateByUrl(environment.paginaCapturar, { state: { data: undefined } });
   }
 
   onClickEditar() {
